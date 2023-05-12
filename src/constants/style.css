@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Ubuntu:ital,wght@0,300;0,400;0,700;1,400;1,500&display=swap');
+
+:root {
+    --logoWidth: 207px;
+    --logoHeight: 204px;
+}
+
+.m-gradient {
+    background: white;
+
+}
+
+@media only screen and (max-width: 768px) {
+    .m-gradient {
+        background: url("../assets/mobile_bg.png");
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+}
+
+.m-blue {
+    background: rgb(23, 23, 134);
+}
+
+.outline-text {
+    -webkit-text-fill-color: transparent !important;
+    -webkit-text-stroke-width: 1px;
+}
+
+.wallzio {
+    width: var(--logoWidth);
+    height: var(--logoHeight);
+    position: relative;
+}
+
+.wallzio .logo {
+    position: absolute;
+    width: var(--logoWidth);
+    height: var(--logoHeight);
+}
+
+.wallzio::after {
+    content: '';
+    width: var(--logoWidth);
+    height: var(--logoHeight);
+    background: #000;
+    position: absolute;
+    left: 0;
+    animation: logoanim 2s linear forwards;
+}
+
+@keyframes logoanim {
+    100% {
+        left: 100%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    :root {
+        --logoWidth: 102px;
+        --logoHeight: 100px;
+    }
+
+}
+
+
+.popup-slider {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,.8);
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+.popup-slider span {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 30px;
+    font-weight: bolder;
+    color: #fff;
+    cursor: pointer;
+    z-index: 10000;
+}
